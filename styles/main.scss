@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+$primary-colors: #BA8D9B  #AD374E;
+$purple: #8A4D76;
+
+@mixin flex-box($direction){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    margin:3rem 0;
+}
+
+
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+// brand logio 
+.brand {
+  color: nth($primary-colors, 1);
+  font-weight: bolder;
+
+
+  &--first {
+    color:nth($primary-colors,2);
+  }
+}
+
+;
+.hero {
+    background:linear-gradient(
+        rgba(20,20,20, .3), 
+        rgba(20,20,20, .3)),url(../img/cafe-store.jpg);
+    background-size:cover;
+
+}
+
+
+
+.mainInfo {
+    @include flex-box(column);
+}
+
+.fa-cubes,.fa-seedling,.fa-truck {
+    font-size:5rem;
+    margin:3rem 0;
+}
+
+.column {
+    @include flex-box(column);
+}
+
+.desc {
+    background:linear-gradient(
+        rgba(20,20,20, .3), 
+        rgba(20,20,20, .3)),url(../img/coffeeimg2.jpg);
+    background-size:cover;
+    height:50vh;
+    @include flex-box(column);
+
+
+}
+
+
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+    height: 0;
+    @include flex-box(column);
+    iframe {
+        position: absolute;
+        top: 0;
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.contact {
+    background:linear-gradient(
+        rgba(20,20,20, .3), 
+        rgba(20,20,20, .3)),url(../img/contact.jpg);
+    background-size:cover;
+    height:100vh;
+    @include flex-box(column);
+}
